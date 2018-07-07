@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Bus_ManagementModel2StoreContainer" CdmEntityContainer="Bus_ManagementEntities3">
+    <EntitySetMapping Name="Cancels">
+      <EntityTypeMapping TypeName="Bus_ManagementModel2.Cancel">
+        <MappingFragment StoreEntitySet="Cancel">
+          <ScalarProperty Name="CancelId" ColumnName="CancelId" />
+          <ScalarProperty Name="PassengerId" ColumnName="PassengerId" />
+          <ScalarProperty Name="TicketPNR" ColumnName="TicketPNR" />
+          <ScalarProperty Name="TicketNo" ColumnName="TicketNo" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="TicketId" ColumnName="TicketId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payments">
+      <EntityTypeMapping TypeName="Bus_ManagementModel2.Payment">
+        <MappingFragment StoreEntitySet="Payment">
+          <ScalarProperty Name="PayId" ColumnName="PayId" />
+          <ScalarProperty Name="PaymentSystem" ColumnName="PaymentSystem" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="PassengerId" ColumnName="PassengerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tickets">
+      <EntityTypeMapping TypeName="Bus_ManagementModel2.Ticket">
+        <MappingFragment StoreEntitySet="Ticket">
+          <ScalarProperty Name="TicketId" ColumnName="TicketId" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="TicketNo" ColumnName="TicketNo" />
+          <ScalarProperty Name="Bus_Name" ColumnName="Bus_Name" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Taka" ColumnName="Taka" />
+          <ScalarProperty Name="PassengerId" ColumnName="PassengerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="Bus_ManagementModel2.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="PassengerId" ColumnName="PassengerId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Bus_ManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CityOperator">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="City_From" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="City_To" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Dtate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Dept_Time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Arr_Time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Seat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fare" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Details" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="Bus_Management" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CityOperators" EntityType="Self.CityOperator" />
+  </EntityContainer>
+</Schema>

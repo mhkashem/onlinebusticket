@@ -1,0 +1,324 @@
+﻿<html>
+<head >
+
+    <link href="https://www.shohoz.com/css/datepicker.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://www.shohoz.com/css/shohoz_style.css?v=12" rel="stylesheet">
+    <link href="https://www.shohoz.com/css/template.css?v=3" rel="stylesheet">
+   
+    <link href="https://www.shohoz.com/font-awesome-4.3.0/css/font-awesome.css?v=2" rel="stylesheet">
+    <!-- Facebook Pixel Code -->
+   
+    <link rel="stylesheet" type="text/css" href="https://www.shohoz.com/css/bjqs.css" />
+    <!--h-->
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+</head>
+
+<body ng-app="Myapp">
+    <div id="toastContainer" ng-controller="operatorController" layout="row" ng-cloak>
+        <table>
+            <tbody>
+                <tr class="trseats" style="display: table-row;">
+                    <td>
+                        <div class="view_seat_bg">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="H1">Choose your seat(s)</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="col-md-6">
+
+                                            <p style="margin:0 auto;text-align: center;">Hold the cursor on seats for seat numbers, click to select or deselect.</p>
+
+
+                                            <div class="seat_layout clearfix " style="width:180px;">
+                                                <!--						<div class="stearing"></div>-->
+                                                <div style="width:200px;float: right;height:20px;">
+                                                    <div class="driver-steering " title="DRIVER" data-toggle="tooltip" data-placement="bottom"></div>
+                                                </div>
+
+                                                <ul style="width:30px; float:right;" class="list-inline">
+
+                                                    <li>
+                                                        <a href="" class="seat" title="[A4]" data-toggle="tooltip" data-placement="bottom" ng-model="data1='A4'" ng-click="selectedSeat(data1)">0-5-1</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[B4]" data-toggle="tooltip" data-placement="bottom" ng-model="data2='B4'" ng-click="selectedSeat(data2)">0-5-2</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[C4]" data-toggle="tooltip" data-placement="bottom" ng-model="data3='C4'" ng-click="selectedSeat(data3)">0-5-3</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[D4]" data-toggle="tooltip" data-placement="bottom" ng-model="data4='D4'" ng-click="selectedSeat(data4)">0-5-4</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[E4]" data-toggle="tooltip" data-placement="bottom" ng-model="data5='E4'" ng-click="selectedSeat(data5)">0-5-5</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[F4]" data-toggle="tooltip" data-placement="bottom" ng-model="data6='F4'" ng-click="selectedSeat(data6)">0-5-6</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[G4]" data-toggle="tooltip" data-placement="bottom" ng-model="data7='G4'" ng-click="selectedSeat(data7)">0-5-7</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[H4]" data-toggle="tooltip" data-placement="bottom" ng-model="data8='H4'" ng-click="selectedSeat(data8)">0-5-8</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[I4]" data-toggle="tooltip" data-placement="bottom" ng-model="data9='I4'" ng-click="selectedSeat(data9)">0-5-9</a>
+                                                    </li>
+                                                </ul>
+                                                <ul style="width:30px; float:right;" class="list-inline">
+
+                                                    <li>
+                                                        <a href="" class="seat" title="[A3]" data-toggle="tooltip" data-placement="bottom" ng-model="data11='A3'" ng-click="selectedSeat(data11)">0-4-1</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[B3]" data-toggle="tooltip" data-placement="bottom" ng-model="data12='B3'" ng-click="selectedSeat(data12)">0-4-2</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[C3]" data-toggle="tooltip" data-placement="bottom" ng-model="data13='C3'" ng-click="selectedSeat(data13)">0-4-3</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[D3]" data-toggle="tooltip" data-placement="bottom" ng-model="data14='D3'" ng-click="selectedSeat(data14)">0-4-4</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[E3]" data-toggle="tooltip" data-placement="bottom" ng-model="data15='E3'" ng-click="selectedSeat(data15)">0-4-5</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[F3]" data-toggle="tooltip" data-placement="bottom" ng-model="data16='F3'" ng-click="selectedSeat(data16)">0-4-6</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[G3]" data-toggle="tooltip" data-placement="bottom" ng-model="data17='G3'" ng-click="selectedSeat(data17)">0-4-7</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[H3]" data-toggle="tooltip" data-placement="bottom" ng-model="data18='H3'" ng-click="selectedSeat(data18)">0-4-8</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[I3]" data-toggle="tooltip" data-placement="bottom" ng-model="data19='I3'" ng-click="selectedSeat(data19)">0-4-9</a>
+                                                    </li>
+                                                </ul>
+                                                <ul style="width:30px; float:right;" class="list-inline">
+
+                                                    <li data-seat="{&quot;ticket_id&quot;:95354539,&quot;trip_id&quot;:1894681,&quot;company_id&quot;:6,&quot;seat_number&quot;:&quot;&quot;,&quot;seat_column&quot;:3,&quot;seat_row&quot;:1,&quot;seat_floor&quot;:0,&quot;ticket_type&quot;:0,&quot;ticket_status&quot;:0,&quot;seat_type_id&quot;:0,&quot;fare_type_id&quot;:0,&quot;is_selected_for_booking&quot;:0,&quot;counter_id&quot;:null,&quot;fare_type_name&quot;:&quot;&quot;,&quot;seatAvailable&quot;:0}">
+                                                    </li>
+                                                    <li data-seat="{&quot;ticket_id&quot;:95354544,&quot;trip_id&quot;:1894681,&quot;company_id&quot;:6,&quot;seat_number&quot;:&quot;&quot;,&quot;seat_column&quot;:3,&quot;seat_row&quot;:2,&quot;seat_floor&quot;:0,&quot;ticket_type&quot;:0,&quot;ticket_status&quot;:0,&quot;seat_type_id&quot;:0,&quot;fare_type_id&quot;:0,&quot;is_selected_for_booking&quot;:0,&quot;counter_id&quot;:null,&quot;fare_type_name&quot;:&quot;&quot;,&quot;seatAvailable&quot;:0}">
+                                                    </li>
+                                                    <li data-seat="{&quot;ticket_id&quot;:95354549,&quot;trip_id&quot;:1894681,&quot;company_id&quot;:6,&quot;seat_number&quot;:&quot;&quot;,&quot;seat_column&quot;:3,&quot;seat_row&quot;:3,&quot;seat_floor&quot;:0,&quot;ticket_type&quot;:0,&quot;ticket_status&quot;:0,&quot;seat_type_id&quot;:0,&quot;fare_type_id&quot;:0,&quot;is_selected_for_booking&quot;:0,&quot;counter_id&quot;:null,&quot;fare_type_name&quot;:&quot;&quot;,&quot;seatAvailable&quot;:0}">
+                                                    </li>
+                                                    <li data-seat="{&quot;ticket_id&quot;:95354554,&quot;trip_id&quot;:1894681,&quot;company_id&quot;:6,&quot;seat_number&quot;:&quot;&quot;,&quot;seat_column&quot;:3,&quot;seat_row&quot;:4,&quot;seat_floor&quot;:0,&quot;ticket_type&quot;:0,&quot;ticket_status&quot;:0,&quot;seat_type_id&quot;:0,&quot;fare_type_id&quot;:0,&quot;is_selected_for_booking&quot;:0,&quot;counter_id&quot;:null,&quot;fare_type_name&quot;:&quot;&quot;,&quot;seatAvailable&quot;:0}">
+                                                    </li>
+                                                    <li data-seat="{&quot;ticket_id&quot;:95354559,&quot;trip_id&quot;:1894681,&quot;company_id&quot;:6,&quot;seat_number&quot;:&quot;&quot;,&quot;seat_column&quot;:3,&quot;seat_row&quot;:5,&quot;seat_floor&quot;:0,&quot;ticket_type&quot;:0,&quot;ticket_status&quot;:0,&quot;seat_type_id&quot;:0,&quot;fare_type_id&quot;:0,&quot;is_selected_for_booking&quot;:0,&quot;counter_id&quot;:null,&quot;fare_type_name&quot;:&quot;&quot;,&quot;seatAvailable&quot;:0}">
+                                                    </li>
+                                                    <li data-seat="{&quot;ticket_id&quot;:95354564,&quot;trip_id&quot;:1894681,&quot;company_id&quot;:6,&quot;seat_number&quot;:&quot;&quot;,&quot;seat_column&quot;:3,&quot;seat_row&quot;:6,&quot;seat_floor&quot;:0,&quot;ticket_type&quot;:0,&quot;ticket_status&quot;:0,&quot;seat_type_id&quot;:0,&quot;fare_type_id&quot;:0,&quot;is_selected_for_booking&quot;:0,&quot;counter_id&quot;:null,&quot;fare_type_name&quot;:&quot;&quot;,&quot;seatAvailable&quot;:0}">
+                                                    </li>
+                                                    <li data-seat="{&quot;ticket_id&quot;:95354569,&quot;trip_id&quot;:1894681,&quot;company_id&quot;:6,&quot;seat_number&quot;:&quot;&quot;,&quot;seat_column&quot;:3,&quot;seat_row&quot;:7,&quot;seat_floor&quot;:0,&quot;ticket_type&quot;:0,&quot;ticket_status&quot;:0,&quot;seat_type_id&quot;:0,&quot;fare_type_id&quot;:0,&quot;is_selected_for_booking&quot;:0,&quot;counter_id&quot;:null,&quot;fare_type_name&quot;:&quot;&quot;,&quot;seatAvailable&quot;:0}">
+                                                    </li>
+                                                    <li data-seat="{&quot;ticket_id&quot;:95354574,&quot;trip_id&quot;:1894681,&quot;company_id&quot;:6,&quot;seat_number&quot;:&quot;&quot;,&quot;seat_column&quot;:3,&quot;seat_row&quot;:8,&quot;seat_floor&quot;:0,&quot;ticket_type&quot;:0,&quot;ticket_status&quot;:0,&quot;seat_type_id&quot;:0,&quot;fare_type_id&quot;:0,&quot;is_selected_for_booking&quot;:0,&quot;counter_id&quot;:null,&quot;fare_type_name&quot;:&quot;&quot;,&quot;seatAvailable&quot;:0}">
+                                                    </li>
+                                                    <li data-seat="{&quot;ticket_id&quot;:95354579,&quot;trip_id&quot;:1894681,&quot;company_id&quot;:6,&quot;seat_number&quot;:&quot;&quot;,&quot;seat_column&quot;:3,&quot;seat_row&quot;:9,&quot;seat_floor&quot;:0,&quot;ticket_type&quot;:0,&quot;ticket_status&quot;:0,&quot;seat_type_id&quot;:0,&quot;fare_type_id&quot;:0,&quot;is_selected_for_booking&quot;:0,&quot;counter_id&quot;:null,&quot;fare_type_name&quot;:&quot;&quot;,&quot;seatAvailable&quot;:0}">
+                                                    </li>
+                                                </ul>
+                                                <ul style="width:30px; float:right;" class="list-inline">
+
+                                                    <li>
+                                                        <a href="" class="seat" title="[A2]" data-toggle="tooltip" data-placement="bottom" ng-model="data21='A2'" ng-click="selectedSeat(data21)">0-2-1</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[B2]" data-toggle="tooltip" data-placement="bottom" ng-model="data22='B2'" ng-click="selectedSeat(data22)">0-2-2</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[C2]" data-toggle="tooltip" data-placement="bottom" ng-model="data23='C2'" ng-click="selectedSeat(data23)">0-2-3</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[D2]" data-toggle="tooltip" data-placement="bottom" ng-model="data24='D2'" ng-click="selectedSeat(data24)">0-2-4</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[E2]" data-toggle="tooltip" data-placement="bottom" ng-model="data25='E2'" ng-click="selectedSeat(data25)">0-2-5</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[F2]" data-toggle="tooltip" data-placement="bottom" ng-model="data26='F2'" ng-click="selectedSeat(data26)">0-2-6</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[G2]" data-toggle="tooltip" data-placement="bottom" ng-model="data27='G2'" ng-click="selectedSeat(data27)">0-2-7</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[H2]" data-toggle="tooltip" data-placement="bottom" ng-model="data28='H2'" ng-click="selectedSeat(data28)">0-2-8</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[I2]" data-toggle="tooltip" data-placement="bottom" ng-model="data29='I2'" ng-click="selectedSeat(data29)">0-2-9</a>
+                                                    </li>
+                                                </ul>
+                                                <ul style="width:30px; float:right;" class="list-inline">
+
+                                                    <li>
+                                                        <a href="" class="seat" title="[A1]" data-toggle="tooltip" data-placement="bottom" ng-model="data31='A1'" ng-click="selectedSeat(data31)">0-1-1</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[B1]" data-toggle="tooltip" data-placement="bottom" ng-model="data32='B1'" ng-click="selectedSeat(data32)">0-1-2</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[C1]" data-toggle="tooltip" data-placement="bottom" ng-model="data33='C1'" ng-click="selectedSeat(data33)">0-1-3</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[D1]" data-toggle="tooltip" data-placement="bottom" ng-model="data34='D1'" ng-click="selectedSeat(data34)">0-1-4</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[E1]" data-toggle="tooltip" data-placement="bottom" ng-model="data35='E1'" ng-click="selectedSeat(data35)">0-1-5</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[F1]" data-toggle="tooltip" data-placement="bottom" ng-model="data36='F1'" ng-click="selectedSeat(data36)">0-1-6</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[G1]" data-toggle="tooltip" data-placement="bottom" ng-model="data37='G1'" ng-click="selectedSeat(data37)">0-1-7</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[H1]" data-toggle="tooltip" data-placement="bottom" ng-model="data38='H1'" ng-click="selectedSeat(data38)">0-1-8</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="seat" title="[I1]" data-toggle="tooltip" data-placement="bottom" ng-model="data39='I1'" ng-click="selectedSeat(data39)">0-1-9</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <p id="seatError" class="hidden">Sorry! this ticket is not available now.</p>
+                                        </div>
+
+                                        <div id="Div3" class="col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-4" style="padding-right:0;">
+                                                    <ul id="Ul71" class="list-inline clearfix">
+                                                        <li class="seat-white"></li>
+                                                        <li class="legend-label">Available </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm-4" style="padding-right:0;">
+                                                    <ul id="Ul72" class="list-inline clearfix">
+                                                        <li class="seat-gray"></li>
+                                                        <li class="legend-label">Booked </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm-4" style="padding-right:0;">
+                                                    <ul id="Ul73" class="list-inline clearfix">
+                                                        <li class="seat-green"></li>
+                                                        <li class="legend-label">Selected </li>
+                                                    </ul>
+                                                </div>
+                                                <div id="Div4" class="clearfix">
+
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Seats </th>
+                                                                <th>Operator</th>
+                                                                <th>Time</th>
+                                                            </tr>
+                                                            <tr >
+                                                                <td>{{Tiks}}</td>
+                                                             
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td colspan="3">
+                                                                    <div class="t_data">
+                                                                        <table id="tbl_seat_list">
+                                                                            <tbody></tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div id="tickets_total" class="t_total">
+                                                    <p><b>Total: </b></p><p>
+                                                    </p>
+                                                </div>
+
+                                                <form id="confirmbooking" method="post" action="/booking/bus/confirm">
+                                                    <div class="form-group">
+
+                                                        <p id="errormsg" class="hidden">Choose</p>
+                                                    </div>
+
+                                                    <input type="hidden" id="searchid" name="searchid">
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div id="psngr" class="col-md-8">
+
+                                            <div class="p_head">
+                                                <h5>Passenger Details</h5>
+                                            </div>
+                                            <br />
+                                            <table>
+                                                <tr>
+                                                    <td>Name:</td>
+                                                    <td><input type="text" value="" ng-model="Pass.Name" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Address:</td>
+                                                    <td><input type="text" value="" ng-model="Pass.Address" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email:</td>
+                                                    <td><input type="text" value="" ng-model="Pass.Email" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Phone:</td>
+                                                    <td><input type="text" value="" ng-model="Pass.Phone" /></td>
+                                                </tr>
+                                            </table>
+                                            <br />
+
+                                            <div id="psngr" class="col-md-8">
+
+                                                <div class="p_head">
+                                                    <h5>Payment Details</h5>
+                                                </div>
+                                                <br />
+                                                <table>
+                                                    <tr>
+                                                        <td>Payment System:</td>
+                                                        <td><input type="text" value="" ng-model="Pay.PaymentSystem" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>SystemCode:</td>
+                                                        <td><input type="text" value="" ng-model="Pay.Code" /></td>
+                                                    </tr>
+                                                </table>
+                                                <p>
+                                                    <br /><br />
+                                                    Your ticket(s) would be reserved and inactive for 30 minutes from the time of booking.
+                                                    Pay through bKash & Rocket to our Merchant Account No: 01682051250 and
+                                                    confirm your transaction ID within 30 minutes to get the confirmed ticket.
+                                                </p>
+                                            </div>
+                                            <div class="mid_cont_btn">
+                                                <button type="submit" value="Confirm Reservation" ng-click="createtiks(Tiks,Pay,Pass)" class="btn btn-default btn-block btn-md">Confirm Reservation</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="busdata.js"></script>
+</body>
+</html>

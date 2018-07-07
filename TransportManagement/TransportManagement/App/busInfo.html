@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html ng-app="Myapp">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-3.2.1.min.js"></script>
+    <script src="Scripts/jquery-ui-1.12.1.min.js"></script>
+</head>
+<body ng-controller="operatorController">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th> Operator</th>
+                <th> Arr_Time </th>
+                <th> Dept_Time</th>
+                <th> Seat </th>
+                <th> Fare</th>
+                <th> Details </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="OPts in Opes">
+                <td> businfo.Operator</td>
+                <td> businfo.Arr_Time </td>
+                <td> businfo.Dept_Time</td>
+                <td> businfo.Seat </td>
+                <td> businfo.Fare</td>
+                <td> businfo.Details </td>
+                <td><a href="~/TicketInf.html" ng-click="busdetails(businfo)">View Seat</a></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+<script src="Scripts/angular.min.js"></script>
+<script src="busdata.js"></script>
+<script src="Scripts/bootstrap.min.js"></script>
+<link href="Content/bootstrap.min.css" rel="stylesheet" />

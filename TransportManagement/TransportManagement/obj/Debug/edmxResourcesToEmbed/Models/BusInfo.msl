@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Bus_ManagementModelStoreContainer" CdmEntityContainer="Bus_Management">
+    <EntitySetMapping Name="CityOperators">
+      <EntityTypeMapping TypeName="Bus_ManagementModel.CityOperator">
+        <MappingFragment StoreEntitySet="CityOperator">
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="City_From" ColumnName="City_From" />
+          <ScalarProperty Name="City_To" ColumnName="City_To" />
+          <ScalarProperty Name="Dtate" ColumnName="Dtate" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Dept_Time" ColumnName="Dept_Time" />
+          <ScalarProperty Name="Arr_Time" ColumnName="Arr_Time" />
+          <ScalarProperty Name="Seat" ColumnName="Seat" />
+          <ScalarProperty Name="Fare" ColumnName="Fare" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Bus_ManagementModel2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Cancel">
+    <Key>
+      <PropertyRef Name="CancelId" />
+    </Key>
+    <Property Name="CancelId" Type="Int32" Nullable="false" />
+    <Property Name="PassengerId" Type="Int32" />
+    <Property Name="TicketPNR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TicketNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TicketId" Type="Int32" />
+    <NavigationProperty Name="Ticket" Relationship="Self.FK_Cancel_User" FromRole="Cancel" ToRole="Ticket" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="PayId" />
+    </Key>
+    <Property Name="PayId" Type="Int32" Nullable="false" />
+    <Property Name="PaymentSystem" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Code" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="PassengerId" Type="Int32" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Payment_User" FromRole="Payment" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Ticket">
+    <Key>
+      <PropertyRef Name="TicketId" />
+    </Key>
+    <Property Name="TicketId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CityId" Type="Int32" />
+    <Property Name="TicketNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Bus_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Taka" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PassengerId" Type="Int32" />
+    <NavigationProperty Name="Cancels" Relationship="Self.FK_Cancel_User" FromRole="Ticket" ToRole="Cancel" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Ticket_User" FromRole="Ticket" ToRole="User" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="PassengerId" />
+    </Key>
+    <Property Name="PassengerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Payments" Relationship="Self.FK_Payment_User" FromRole="User" ToRole="Payment" />
+    <NavigationProperty Name="Tickets" Relationship="Self.FK_Ticket_User" FromRole="User" ToRole="Ticket" />
+  </EntityType>
+  <Association Name="FK_Cancel_User">
+    <End Role="Ticket" Type="Self.Ticket" Multiplicity="0..1" />
+    <End Role="Cancel" Type="Self.Cancel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ticket">
+        <PropertyRef Name="TicketId" />
+      </Principal>
+      <Dependent Role="Cancel">
+        <PropertyRef Name="TicketId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payment_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Payment" Type="Self.Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="PassengerId" />
+      </Principal>
+      <Dependent Role="Payment">
+        <PropertyRef Name="PassengerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ticket_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Ticket" Type="Self.Ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="PassengerId" />
+      </Principal>
+      <Dependent Role="Ticket">
+        <PropertyRef Name="PassengerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Bus_ManagementEntities3" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cancels" EntityType="Self.Cancel" />
+    <EntitySet Name="Payments" EntityType="Self.Payment" />
+    <EntitySet Name="Tickets" EntityType="Self.Ticket" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK_Cancel_User" Association="Self.FK_Cancel_User">
+      <End Role="Ticket" EntitySet="Tickets" />
+      <End Role="Cancel" EntitySet="Cancels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payment_User" Association="Self.FK_Payment_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Payment" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ticket_User" Association="Self.FK_Ticket_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Ticket" EntitySet="Tickets" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

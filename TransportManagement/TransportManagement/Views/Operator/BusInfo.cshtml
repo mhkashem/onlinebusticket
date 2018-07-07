@@ -1,0 +1,129 @@
+﻿@model IEnumerable<TransportManagement.Models.CityOperator>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <style>
+        table {
+            width: 100%;
+        }
+
+        table, tr, td {
+            border: 3px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 20px;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: #eee;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 20px;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: #eee;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        th {
+            background-color: #8c7373;
+            color: white;
+        }
+    </style>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>Time & Operator</title>
+</head>
+<body >
+
+    <h1>Departure</h1>
+    @using (Html.BeginForm("TicketInfo", "Operator", FormMethod.Get))
+    {
+        <table style="width:100%">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Operator)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Dept_Time)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Arr_Time)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Seat)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fare)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Details)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Operator)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Dept_Time)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Arr_Time)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Seat)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Fare)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Details)
+                    </td>
+                    <td>
+                        @*@Html.ActionLink("View Seat", "SelectBus", "Operator", new { dTime = item.Dept_Time,op = item.Operator,fare = item.Fare },null)@*<input type=submit value="View Seats" style="width:100%;padding:5px 10px;border-radius: 3px;background-color:Gray;color: #ffffff;border-color: #ed7500;">*@*
+                    <a href="~/TicketInf.html" ng-click="passoP(getSeat)">View Seat</a>
+                </td>
+
+            </tr>
+            }
+
+        </table>
+    }
+  
+</body>
+</html>

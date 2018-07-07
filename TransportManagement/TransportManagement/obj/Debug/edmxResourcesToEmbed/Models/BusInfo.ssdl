@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Bus_ManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CityOperator">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="City_From" Type="varchar" MaxLength="50" />
+    <Property Name="City_To" Type="varchar" MaxLength="50" />
+    <Property Name="Dtate" Type="varchar" MaxLength="50" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Dept_Time" Type="varchar" MaxLength="50" />
+    <Property Name="Arr_Time" Type="varchar" MaxLength="50" />
+    <Property Name="Seat" Type="varchar" MaxLength="50" />
+    <Property Name="Fare" Type="varchar" MaxLength="50" />
+    <Property Name="Details" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityContainer Name="Bus_ManagementModelStoreContainer">
+    <EntitySet Name="CityOperator" EntityType="Self.CityOperator" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

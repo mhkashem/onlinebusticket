@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html ng-app="Myapp">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-3.2.1.min.js"></script>
+    <script src="Scripts/jquery-ui-1.12.1.min.js"></script>
+    
+</head>
+<body ng-controller="operatorController">
+    <table class="table table-responsive">
+        <tr>
+            <td>From:</td>
+            <td><input type="text" value="" ng-model="Opes.City_From" /></td>
+        </tr>
+        <tr>
+            <td>To:</td>
+            <td><input type="text" value="" ng-model="Opes.City_To" /></td>
+        </tr>
+        <tr>
+            <td>Date:</td>
+            <td><input type="text" value="" ng-model="Opes.Dtate" /></td>
+        </tr>
+
+        <tr>
+            <td><a href="busInfo.html" ng-click="passoP(Opes)">Search</a></td>
+        </tr>
+    </table>
+
+</body>
+</html>
+<script src="Scripts/angular.min.js"></script>
+<script src="busdata.js"></script>
+<script src="Scripts/bootstrap.min.js"></script>
+<link href="Content/bootstrap.min.css" rel="stylesheet" />
